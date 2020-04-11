@@ -1,0 +1,472 @@
+,age,sex,symptoms
+6,42,female,fever
+8,59,female,fever
+13,38,female,cough
+14,45,male,fever
+17,33,female,fever
+20,37,male,fever
+21,39,male,fever
+22,32,female,respiratory symptoms
+23,45,male,fever
+24,45,male,fever
+25,18,female,"fever,respiratory symptoms"
+26,56,female,"fever,respiratory symptoms"
+27,42,male,fever
+28,33,female,fever
+55,44,female,"fatigue,fever"
+88,43,male,"discomfort,fever"
+89,24,male,"cough,fever,muscular soreness,weakness"
+90,40,male,"cough,dizziness"
+98,66,male,"cough,fatigue,fever,weakness"
+99,65,female,"cough,fever,weakness"
+100,36,male,"cough,diarrhea,fever,rhinorrhoea,sneezing"
+102,63,female,"anhelation,cough,fever,pleural effusion,weakness"
+103,37,female,"diarrhea,fever,nasal congestion,pleuritic chest pain,sore throat"
+121,66,female,cough
+144,63,male,"cough,fever"
+145,62,female,"cough,fever"
+146,49,male,fever
+147,46,male,fever
+149,34,male,"cough,fever"
+150,41,male,fever
+151,72,female,"fever,weakness"
+152,20,female,"cough,fever,muscular soreness"
+153,54,male,"cough,fever"
+154,33,female,fever
+155,49,female,"chest distress,cough,expectoration,muscular soreness"
+159,33,male,"cough,"
+160,2,female,"fever,sneeze"
+161,29,male,discomfort
+162,62,male,"cough,muscular stiffness,weakness"
+163,61,male,fever
+164,20,male,discomfort
+165,51,male,fever
+166,50,female,fever
+170,72,male,"cough,fever"
+171,80,male,"chest distress,dyspnea"
+172,49,male,"cough,expectoration,fever"
+173,69,male,"cough,fatigue,fever,"
+176,66,male,"chest tightness,dyspnea,fever"
+185,39,male,"cough,fever"
+186,56,male,fever
+187,62,female,fever
+190,57,female,"cough,fever"
+215,37,male,fever
+224,56,male,"cough,fever"
+225,50,male,"cough,fever"
+234,27,male,"fever,weakness"
+235,40,female,"cough,fever"
+242,42,female,"cough,fever"
+245,33,male,"cough,fever"
+246,40,male,"cough,fever,soreness"
+247,50,female,pharynx
+248,42,male,muscular soreness
+250,52,female,"cough,sore throat"
+252,28,male,fever
+253,22,male,fever
+254,32,female,fever
+255,42,male,fever
+258,38,male,fever
+259,62,female,fever
+260,65,male,fever
+273,56,female,"fatigue,fever,weakness"
+274,35,male,"cough,fever,runny nose"
+294,28,female,fever
+295,31,male,fever
+296,50,male,"cough,dyspnea,fever"
+297,48,male,fever
+298,36,male,"fatigue,fever"
+300,37,male," fever,muscle aches,other symptoms"
+301,19,male,"fatigue,muscle aches,sore throat"
+302,60,female,"cough,fever"
+303,58,male,"cough,fever"
+306,29,female,fever
+309,47,male,"fever,sore muscle,weakness"
+310,52,male,"fever,sore muscle,weakness"
+311,51,male,"fatigue,fever"
+312,53,male,"cough,fever"
+313,39,female,"runny nose,fever"
+336,46,male,fever
+337,46,male,fever
+459,25,female,fever
+464,43,male,fever
+465,22,male,"fever,sore throat"
+467,51,male,"fever,muscular soreness,rigor"
+468,38,male," diarrhea,dyspnea,lack of energy,muscle pain"
+469,59,male,"cough,fever"
+470,60,male,"cough,fatigue,fever"
+471,35,male,fever
+472,25,female,"fever,pharyngalgia"
+594,64,female,pneumonitis
+596,28,male,pneumonia
+597,41,male,pneumonia
+610,49,male,fever
+618,65,female,"cough,discomfort,fever,other symptoms"
+638,48,male,flu-like symptoms
+639,30,female," cough,fatigue,fever"
+640,31,male,"cough,fever"
+641,40,male,"fever,pneumonia,sore throat"
+642,30,male,"cough,fever,sore throat"
+643,30-39,female,"cough,fever"
+644,65,female,asymptomatic
+645,2,male,asymptomatic
+646,11,male,asymptomatic
+647,32,male,"cough,fever,shortness of breath"
+648,66,male,"cough,fever"
+649,53,female,"cough,fever"
+651,35,female,"cough,fever"
+652,55,male,fever
+653,55,female,"cough,fever,shortness breath"
+657,68,male,fever
+658,61,female," fever,sore throat"
+660,33,female,"cough,fever,muscle aches"
+662,35,male,"cough,fever,nausea"
+665,40,male,"cough,fever"
+671,51,male,"cough,fever,myalgia"
+672,73,female,fever
+675,54,male," fever"
+677,40,male,"fever,joint pain,pneumonia"
+876,43,male,fever
+877,48,female,fever
+878,54,female,fever
+879,47,male,fever
+880,55,male,fever
+881,47,female,"cough,fever"
+882,46,female,fever
+949,47,female,fever,fatigue,dry cough
+1004,70,female,pneumonitis
+1005,52,female,pneumonitis
+1010,44,male,pneumonitis
+1049,58,female,fever
+1050,39,female,fever
+1051,21,female,"dizziness,sore limbs"
+1053,50-59,female,pneumonia
+1077,68,female,"cough,fever"
+1078,64,male,fever
+1080,60,male,"fever,runny nose"
+1289,44,female,fever
+1290,53,male,fever
+1377,39,male,pneumonia
+1378,41,female,pneumonia
+1380,27,male,pneumonitis
+1440,52,female,"cough,fever,myalgia,rhinorrhea,sore throat"
+1462,33,male," fever,myalgias,sore throat"
+1463,55,male,"aching muscles,fever,pneumonia"
+1488,28,male,dry cough
+1654,59,female,fever
+1655,38,male,fever
+1656,37,male,fever
+1657,49,male,fever
+1658,43,female,fever
+1659,39,female,fever
+1660,41,male,fever
+1661,67,female,fever
+1662,52,female,fever
+1663,31,male,fever
+1664,34,female,fever
+1665,24,female,fever
+1666,47,male,fever
+1667,16,male,fever
+1668,32,male,fever
+1669,32,female,fever
+1670,25,male,fever
+1671,52,female,fever
+1672,42,female,fever
+1673,51,male,fever
+1674,43,male,fever
+1747,60-69,male," cough,joint pain"
+1748,40-49,female,"cough,fever,pneumonia"
+1810,36,male,pneumonitis
+1811,41,female,pneumonitis
+1812,25,male,pneumonitis
+1813,46,female,pneumonitis
+1814,50,male,pneumonitis
+1815,36,female,pneumonitis
+1816,36,male,pneumonitis
+1817,32,female,pneumonitis
+1818,64,male,pneumonitis
+1819,70,male,pneumonitis
+1820,25,male,pneumonitis
+1997,50,male,"myalgia,rhinorrhea"
+2991,33,male,cough
+3023,72,male,fever
+3024,73,female,fever
+3378,33,male,fever
+3623,37,female,cough
+3624,75,male,"cough,dyspnea"
+4051,39,male,"cough,fever"
+4091,28,female,"cough,fever"
+4092,37,male,"fever,pharyngeal discomfort"
+4093,51,female," fever"
+4094,45,female,"fever,sore throat,"
+4095,27,female,"cough,fever"
+4096,32,male,fever
+4097,35,male,physical discomfort
+4222,31,male,discomfort
+4223,66,female,weakness
+4225,32,male,fever
+4226,60,male,fever,cough
+4509,40,male,"chest tightness,fever,nausea"
+4797,73,male,respiratory symptoms
+4798,25,female,"cough,fever"
+4800,44,male,"cough,sore throat"
+4807,28,male,"cough,fever"
+4808,62,female,"cough,fever,muscle ache"
+4816,20-29,female,"cough,runny nose"
+4817,30-39,male,asymptomatic
+4818,50-59,male,asymptomatic
+4819,40-49,male,"cough,fever"
+4820,40-49,male,"cough,fever"
+4821,30-39,male,asymptomatic
+4822,20-29,male,runny nose
+4830,47,female,fever
+4833,80,male,"cough,fever"
+5049,26,male,"cough,fever"
+5050,73,female,fever
+5051,44,male,"cough,fever,"
+5052,36,male,"cough,fever"
+5053,38,female,"cough,fever"
+5055,64,female,"cough,"
+5056,59,male,"cough,sore throat,"
+5057,39,female,fever
+5058,46,female," fatigue"
+5090,72,female,cough
+5128,47,male,"fever,dry cough,fatigue"
+5695,47,male,lesions on chest radiographs
+5708,42,female,fever
+5709,66,female,fever
+5710,36,female,"cough,fever"
+5711,37,female,fever
+5712,46,female,"cough,fever"
+5713,43,male,fever
+5792,33,female,fever
+5794,42,female,chest tightness
+5851,41,male,"cough,fever"
+5853,59,male,"cough,fever,runny nose"
+5854,29,female,"cough,fever,runny nose"
+5855,42,female,"cough,fever,runny nose"
+5857,28,female,"fever,sore throat"
+5870,64,female,"cough,fever"
+5901,29,male,fever
+5902,69,female,fever
+5903,9,male,"cough,fever"
+5904,61,male,fever
+5953,33,male,fever
+5967,25,male,"cough,diarrhoea,runny nose"
+5985,66,female,"cough,fever"
+5986,51,female,"cough,high fever,myalgia"
+5987,65,male,"fever,myalgia"
+6070,49,female,cough
+6071,16,female,"cough,fever"
+6075,64,female,"cough,fever,breathing problem"
+6164,69,male,fatigue
+6233,54,female,"fever,sore throat,fatigue,diarrhea"
+6234,62,male,"fever,fatigue"
+6235,60,female,"fever,sore throat,fatigue"
+6236,45,female,cough
+6409,52,female,fever
+6461,55,female,"chest tightness,fever"
+6462,48,female,"fever,joint pain,muscle soreness"
+6463,43,female,fever
+6464,35,male,fever
+6465,29,male,fever
+6466,51,male,"cough,fever"
+6467,35,male," fever"
+6468,28,female,"cough,fever"
+6469,78,female,"chest pain,nasal congestion"
+6470,38,female,"cough,muscle soreness"
+6471,36,male,"cough,fever"
+6790,41,male,fever
+6885,22,female,fever
+7343,53,female,pneumonitis
+7392,60,male,"fever,myalgia,shortness of breath"
+7595,64,female,"cough,fever"
+7596,35,female,fever
+7597,75,male,fever
+7598,61,female,fever
+7599,50-59,female,"cough,fever,pneumonia,respiratory distress"
+7600,30-39,female,"fever,runny nose"
+7606,40-49,male,"cough,fever"
+7607,20-29,male,fever
+7608,50-59,female,fever
+7609,50-59,male,fever
+7610,40-49,female," fever,runny nose,sore throat,wheezing"
+7619,20-29,female,"cough,respiratory problems"
+8197,68,male,"nausea"
+8209,60-60,female,"fever,"
+8210,60-69,male,fever
+8211,60-69,male,"fever,full body slump"
+8212,60-69,male,"cough,fever"
+8496,50-59,male,"cough,fever"
+8612,42,female,"fever,cough"
+8613,26,female,"fever,cough"
+8614,37,male,"fever,dry throat,sore throat"
+8615,24,male,"fever,runny nose"
+8617,54,female,dry throat,sore throat,fatigue
+8618,29,female,",dry mouth"
+8619,38,female,"fever,dry mouth,throat discomfort"
+8620,29,male,fever
+8625,55,female,pharyngeal discomfort
+8626,27,female,fever
+8627,1,female,diarrhea
+8628,46,female,"cough,throat discomfort"
+8630,33,female,Pharyngeal dryness
+8631,23,male,"cough,fever"
+8632,27,female,fever
+8633,53,female,"dry throat,dry cough"
+8634,34,female,"chest pain,cough"
+8636,58,female,"cough,chest tightness,dry mouth"
+8637,57,male,"cough,fever"
+8852,60,male,fever,cough,fatigue,nausea
+8880,65,male,fever,cough
+8881,38,female,fever,fatigue
+8888,26,male,"cough,fever"
+8890,27,male,"cough,fever"
+8902,33,male,"cough,fever"
+8906,73,female,"cough,fever,sore throat"
+9370,51,male,fever
+9371,43,male,"cough,diarrheoa"
+9372,67,female," cough,fever"
+9373,37,male,fever
+9561,50,male,"cough,fever"
+9562,61,female,"cough,fatigue,fever"
+10348,60,male,"fever,severe pneumonia"
+10374,29,male,"eye irritation,fever"
+10375,40-49,male,fever
+10603,20-29,male,"cough,fever,sore throat"
+10611,40-49,male,"cough,fever"
+10613,80-89,male,"dyspnea,fever"
+10614,50-59,male,"cough,difficulty breathing,fever"
+10615,20-29,male,fever
+10620,55,female,"fever,runny nose"
+10621,0.25,female,"cough,runny nose"
+10622,50,male,fatigue
+10626,50-59,male,fever
+10627,50-59,female,mild cough
+10628,60-69,male,cough
+10645,69,female,cough
+10650,43,male,Sore throat
+10661,34,female,cough
+10864,50-59,male,fever
+10886,31,male,"feeling ill,cough"
+10970,39,female,"cough,fever"
+10971,20-29,male,"cough,fever"
+10972,80-89,female,"fatigue"
+10978,50-59,male,"diarrhea,fever,general malaise"
+10979,70-79,male,fever
+10982,50-59,male,"cough,fever,malaise"
+10984,61,male,fever
+10996,60-60,female,poor physical condition
+11003,35,female,"cough,fatigue,fever"
+11015,60-69,male,"cough,shortness of breath"
+11027,30-39,male,"cough,fever"
+11231,20-29,female,fever
+11232,50-59,male,fever
+11233,45,female,yes
+11242,50-59,male,fever
+11243,0-6,male,fever
+11244,0-10,male,fever
+11245,0-10,male,fever
+11246,40-49,female,fever
+11247,80-89,male,
+11391,60-69,female,"nausea,cough,pneumonia,fever"
+11393,40-49,male,fever
+11492,60-69,male,"fever,cough"
+11493,13-19,female,fever
+11494,70-79,female,fever
+11495,50-59,female,"malaise,"
+11496,50-59,male,"fever,breathing difficulty"
+11497,70-79,male,"fever,cough,malaise"
+11498,50-59,female,"sore throat,Cough,fever"
+11499,80-89,male,difficulty breathing
+11501,50-59,male,fever
+11505,50-59,female,"fever,shortness of breath,pneumonia"
+11506,60-69,male,severe dyspnea
+11507,60-69,male,fever
+11508,60-69,male,fever
+11509,60-69,female,fever
+11510,40-49,female,fever
+11559,96,female,"fever,cough"
+11562,60-69,female,nausea
+11605,10,male,fever
+11620,62,male,fever,fatigue
+11621,52,female,chest tightness,fatigue
+11664,44,female,cough,fever
+11665,55,female,fever,nasal congestion,runny nose,sore throat,cough
+11688,20-29,male,fever 39.3
+11689,70-79,male,fever 38
+11690,30-39,female,fever 38
+11694,20,female,"fever,cough"
+11710,28,female,fever
+11724,1.75,female,fever
+11728,57,male,cough, fever
+11731,52,female,dry cough
+11732,41,male,cough,sore body,cold
+11745,62,male,fever
+11751,36,female,flu-like symptoms
+11792,50-59,male,sore throat
+11804,41,male,"fever,sore throat,mild cough"
+12232,21,Female,fever
+12233,16,Male,cough
+12234,80,Male,fever
+12236,33,Male,"fever,cough"
+12237,55,Female,cough
+12239,60,Female,cough
+12240,60-69,male,low fever
+12241,50-59,male,low fever
+12242,70-79,male,low fever,cough
+12243,20-29,male,"fever,malaise"
+12244,20-29,female,"sore throat,fever"
+12245,70-79,male,"fever,pneumonia"
+12247,70-79,female,"fever,cough"
+12248,70-79,female,"fever,malaise"
+12249,40-49,male,"fever,cough"
+12251,50-59,male,"fever Cough,malaise,"
+12252,40-49,female,"cough,sore throat,chest pain"
+12253,80-89,male,"fever,cough,phlegm,dyspnea"
+12254,70-79,male,"fever,cough,phlegm,dyspnea"
+12255,70-79,male,"fever,cough,phlegm"
+12256,50-59,male,"fever,sore throat"
+12257,60-69,male,fever
+12258,70-79,male,"rever,cough"
+12259,70-79,male,"fever,cough"
+12260,70-79,female,"fever,cough"
+12262,50-59,male,"malaise,fever,pneumonia"
+12263,50-59,female,"Sore throat"
+12264,50-59,male,fever
+12265,50-59,male,"fever,malaise"
+12266,60-69,female,"fever,cough,phlegm"
+12267,40-49,male,"Fever,cough,"
+12268,50-59,male,fever
+12269,50-59,male,"cough,malaise"
+12270,30-39,male,"sore throat,fever"
+12271,70-79,male,"fatigue,fever"
+12272,60-69,male,fever
+12273,40-49,male,"cough,fever,sore throat"
+12274,40-49,male,"fever,joint pain"
+12275,0-10,male,"fever,cough"
+12276,30-39,male,"fever,malaise,joint pain"
+12277,0-10,male,"fever,cough"
+12278,80-89,male,"fever,cough"
+12279,30-39,male,"cough,fever,joint pain"
+12280,80-89,male,"Cough,fever"
+12281,60-69,male,"Fever,malaise,sore throa"
+12282,0-10,female,"cough,sore throat"
+12283,60-69,female,Fever
+12284,60-69,male,"Fever,cough,."
+13153,40-49,female,"fatigue"
+13154,20-29,male,fever
+13155,60-69,male,"cough,sore throat"
+13156,80-89,female,"cough,phlegm,fever"
+13157,0-10,male,fever
+13158,80-89,male,"fever,fatigue,difficulty walking"
+13159,60-69,female,cough
+13160,60-69,male,fever
+13161,60-69,male,"fever,malaise"
+13162,60-69,female," cough,fever,cough,breathing difficulty"
+13163,40-49,male,"fever"
+13164,70-79,male,fever
+13166,60-69,female,fever,cough
+13167,60-69,male,fever
+13169,60-69,male,fever
+13170,40-49,female,fever
