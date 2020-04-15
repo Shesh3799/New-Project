@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>TESTING FACILITY- REGISTER NOW</title>
+	<title>SAMPLE COLLECTION PORTAL- REGISTER NOW</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="{{ url_for('static',filename='images/icons/favicon.ico')}}"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animate/animate.css')}}">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animsition/css/animsition.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/select2/select2.min.css')}}">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/daterangepicker/daterangepicker.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
 <!--===============================================================================================-->
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="container-login200">
+		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
 
 
@@ -38,46 +38,34 @@
 				<form class="login100-form validate-form">
 
 					<span class="login100-form-title p-b-33">
-					<div align="center">
 						Sign In
-					</div>
-					</span>		
-
-					<br>
-					<br>			
+					</span>					
 
 
 					<div class="wrap-input100 validate-input">
-						<div align="center">
-						<input class="input100" type="text" name="Test_center_name" placeholder="Username">
+						<input class="input100" type="text" name="patient_name" placeholder="Username">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-						<div align="center">
-						<input class="input100" type="password" name="Testing_center_pass" placeholder="Password">
+						<input class="input100" type="password" name="patient_pass" placeholder="Password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-						<div align="center">
-						<input class="input100" type="password" name="Testing_center_pass" placeholder="Confirm Password">
+						<input class="input100" type="password" name="patient_pass" placeholder="Confirm Password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
 					</div>
 
 					<br>
 
 					<div class="form-group" id="smth">
-				    <div align="center">
-                    <label for="securityQuestion">Security Question?</label>
-                    <br>
+                    <label for="securityQuestion">Security Question 1?</label>
                     <select name="secQuest" id="dropdown" placeholder="sdhhjh">
+                    	<option value="">Security Questions </option>
                         <option value="0">Where was your mother born?</option>
                         <option value="1">What was your first car?</option>
                         <option value="2">What was the first name of your first pet?</option>
@@ -85,26 +73,20 @@
                         <option value="4">Where were you born?</option>
                         <option value="5">What model your first smartphone was?</option>
                     </select> 
-                </br>
-                </div>
                 	</div>
 
 					<div class="wrap-input100 validate-input">
-						<div align="center">
 						<input class="input100" type="text" name="answer_1" placeholder="Answer">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
 					</div>
 
 					<br>
 
 					<div class="form-group" id="smth">
-				    <div align="center">
-                    <label for="securityQuestion">Security Question?</label>
-                    <br>
+                    <label for="securityQuestion">Security Question 2?</label>
                     <select name="secQuest" id="dropdown" placeholder="sdhhjh">
-                    	<option value="">Security Question 1</option>
+                    	<option value="">Security Questions </option>
                         <option value="1">Where was your mother born?</option>
                         <option value="2">What was your first car?</option>
                         <option value="3">What was the first name of your first pet?</option>
@@ -112,29 +94,56 @@
                         <option value="5">Where were you born?</option>
                         <option value="6">What model your first smartphone was?</option>
                     </select> 
-                </br>
-                    </div>
                 	</div>			 
 
 					
 
 					<div class="wrap-input100 validate-input">
-						<div align="center">
 						<input class="input100" type="text" name="answer_2" placeholder="Answer">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
+					<br>
+					<br>
+
+					<!--<div class="container-login100-form-btn m-t-20">
+						<button class="login100-form-btn">
+							Sign in
+						</button>
+					</div>-->
+
+
+					<!-- FORGET USER NAME 
+
+					<div class="text-center p-t-45 p-b-4">
+						<span class="txt1">
+							Forgot
+						</span>
+
+						<a href="#" class="txt2 hov1">
+							Username / Password?
+						</a>
 					</div>
 
-					<br>
-					<br>
+					-->
 
+
+					
+
+					<!--<div class="text-center p-t-45 p-b-4">
+						<span class="txt1">
+							Create an account?
+						</span>
+
+						<a href="#" class="txt2 hov1">
+							Sign up
+						</a>
+					</div>-->
+				
 
 
                     <span class="login100-form-title p-b-33">
-                    	<div align="center">
 						Personal Information
-					</div>
 					</span>	
 
 					<br>
@@ -207,6 +216,10 @@
 					</div>
 
 
+
+					</form>
+
+
 					<!-- FORGET USER NAME 
 
 					<div class="text-center p-t-45 p-b-4">
@@ -235,21 +248,21 @@
 
 	
 <!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js')}}" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/animsition/js/animsition.min.js')}}" src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/bootstrap/js/popper.js')}}" src="vendor/bootstrap/js/popper.js"></script>
+	<script href="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js')}}" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/select2/select2.min.js')}}" src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script href="{{ url_for('static',filename='vendor/daterangepicker/moment.min.js')}}" src="vendor/daterangepicker/moment.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/daterangepicker/daterangepicker.js')}}" src="vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script href="{{ url_for('static',filename='vendor/countdowntime/countdowntime.js')}}" src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script href="{{ url_for('static',filename='js/main.js')}}" src="js/main.js"></script>
 
 </body>
 </html>

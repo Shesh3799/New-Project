@@ -27,8 +27,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" href="{{ url_for('static',filename='js/jquery.datetimepicker.min.css')}}">
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.datetimepicker.full.js"></script>
+	<script href="{{ url_for('static',filename='js/jquery.js')}}"></script>
+	<script href="{{ url_for('static',filename='js/jquery.datetimepicker.full.js')}}"></script>
 	
 <!--===============================================================================================-->
 
@@ -47,7 +47,7 @@
 				<form class="login100-form validate-form">
 
 					<span class="login100-form-title p-b-33">
-						Sign In
+						Sign Up
 					</span>					
 
 
@@ -338,25 +338,21 @@
 
 	
 <!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js')}}" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/animsition/js/animsition.min.js')}}" src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/bootstrap/js/popper.js')}}" src="vendor/bootstrap/js/popper.js"></script>
+	<script href="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js')}}" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/select2/select2.min.js')}}" src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script href="{{ url_for('static',filename='vendor/daterangepicker/moment.min.js')}}" src="vendor/daterangepicker/moment.min.js"></script>
+	<script href="{{ url_for('static',filename='vendor/daterangepicker/daterangepicker.js')}}" src="vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script href="{{ url_for('static',filename='vendor/countdowntime/countdowntime.js')}}" src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
-	<script src="js/main.js"></script>
-	<!--<script>
-		$("datetime").datetimepicker();
-	</script>-->
+	<script href="{{ url_for('static',filename='js/main.js')}}" src="js/main.js"></script>
 
 
 </body>
