@@ -4,12 +4,17 @@
 	<title>PATIENT PORTAL</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-	<script href="{{ url_for('static',filename='js/script.js')}}"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("#myInput").on("keyup", function() {
+	    var value = $(this).val().toLowerCase();
+	    $("#myTable tr").filter(function() {
+	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	  });
+	});
+	</script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 	
@@ -27,21 +32,21 @@
 		</div>
 
 		<br>
-      	
+      	<input id="myInput" type="text" placeholder="Search..">
       	<div class="card-body">
         	<div class="d-flex justify-content-center" style="width: 100%"> 
 			<div class="container-login100 " style="width: 90%">
 				<!-- <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50 "> -->
 
-			<table id="example" class="table table-striped table-bordered" style="width:100%">
+			<table id="myTable" class="table table-striped table-bordered" style="width:100%">
 	        <thead>
 	            <tr>
-	                <th>Priority No</th>
-	                <th>COllection date/time</th>
-	                <th>Office</th>
-	                <th>Age</th>
-	                <th>Start date</th>
-	                <th>Salary</th>
+	                <th onclick="sortTable(0)">Priority No</th>
+	                <th onclick="sortTable(1)">COllection date/time</th>
+	                <th onclick="sortTable(2)">Office</th>
+	                <th onclick="sortTable(3)">Age</th>
+	                <th onclick="sortTable(4)">Start date</th>
+	                <th onclick="sortTable(5)">Salary</th>
 	            </tr>
 	        </thead>
 	        <tbody>
@@ -524,7 +529,44 @@
 </div>
 	
 	<br>
-
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
 	
 
 
