@@ -28,6 +28,19 @@
 <!--===============================================================================================-->
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+    <div class="alert alert-warning">
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
+    <!-- <span aria-hidden="true">&times;</span>
+  </button> -->
+</div>
+  {% endif %}
+{% endwith %}
 	
 	<div class="limiter">
 		<div class="container-login100">
@@ -35,25 +48,25 @@
 
 
 				<!--  THE FORM BEGINS HERE-->
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="/llogin">
 					<span class="login100-form-title p-b-33">
 						Sample Collection Portal
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="patient_id" placeholder="Unique ID">
+						<input class="input100" type="text" name="lab_id" placeholder="Unique ID">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="patient_name" placeholder="Username">
+						<input class="input100" type="text" name="lab_name" placeholder="Username">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="patient_pass" placeholder="Password">
+						<input class="input100" type="password" name="lab_pass" placeholder="Password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
@@ -63,8 +76,7 @@
 							Login in
 						</button>
 					</div>
-
-
+				</form>
 					<!--FORGOT USER NAME--> 
 
 					<div class="text-center p-t-45 p-b-4">
@@ -85,7 +97,7 @@
 							Register Now
 						</a>
 					</div>
-				</form>
+
 
 				
 

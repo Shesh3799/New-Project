@@ -3,7 +3,7 @@ from login import *
 
 @app.route('/')
 def home():
-    return render_template('dashboard.html')
+    return render_template('testing_login.html')
 
 
 if __name__=="__main__":

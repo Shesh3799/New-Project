@@ -1,0 +1,12 @@
+{
+	"params":
+	{
+		"local_server":"True",
+		"local_uri":"mysql://shesh:Shesh123$@project-covid.cjxmectndqes.ap-south-1.rds.amazonaws.com/project",
+		"team_page":1,
+		"group_page":0,
+		"login_page":1
+
+
+	}
+}
