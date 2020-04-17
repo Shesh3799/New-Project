@@ -1,9 +1,10 @@
 from login import *
+from signup import *
 
 
 @app.route('/')
 def home():
-    return render_template('dashboard.html')
+    return render_template('patient_register.html')
 
 
 if __name__=="__main__":
