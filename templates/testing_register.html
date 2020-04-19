@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SAMPLE COLLECTION PORTAL- REGISTER NOW</title>
+	<title>Testing Lab PORTAL- REGISTER NOW</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -28,6 +28,19 @@
 <!--===============================================================================================-->
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+    <div class="alert alert-warning">
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
+    <!-- <span aria-hidden="true">&times;</span>
+  </button> -->
+</div>
+  {% endif %}
+{% endwith %}
 	
 	<div class="limiter">
 		<div class="container-login100">
@@ -35,21 +48,27 @@
 
 
 				<!--  THE FORM BEGINS HERE-->
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="/tsignup" method="post">
 
 					<span class="login100-form-title p-b-33">
-						Sign In
+						Sign Up
 					</span>					
 
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="patient_name" placeholder="Username">
+						<input class="input100" type="text" name="reg_num" placeholder="Center Registration Number" required>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="reg_name" placeholder="Registered Name" required>
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="patient_pass" placeholder="Password">
+						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
@@ -59,58 +78,51 @@
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
-
-					<br>
-
-					<div class="form-group" id="smth">
-                    <label for="securityQuestion">Security Question 1?</label>
-                    <select name="secQuest" id="dropdown" placeholder="sdhhjh">
-                    	<option value="">Security Questions </option>
-                        <option value="0">Where was your mother born?</option>
-                        <option value="1">What was your first car?</option>
-                        <option value="2">What was the first name of your first pet?</option>
-                        <option value="3">What was your school name?</option>
-                        <option value="4">Where were you born?</option>
-                        <option value="5">What model your first smartphone was?</option>
-                    </select> 
-                	</div>
-
+				
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="answer_1" placeholder="Answer">
+						<input class="input100" type="text" name="state" placeholder="State" required>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="city" placeholder="City" required>
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
-					<br>
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="adr" placeholder="Address">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
 
-					<div class="form-group" id="smth">
-                    <label for="securityQuestion">Security Question 2?</label>
-                    <select name="secQuest" id="dropdown" placeholder="sdhhjh">
-                    	<option value="">Security Questions </option>
-                        <option value="1">Where was your mother born?</option>
-                        <option value="2">What was your first car?</option>
-                        <option value="3">What was the first name of your first pet?</option>
-                        <option value="4">What was your school name?</option>
-                        <option value="5">Where were you born?</option>
-                        <option value="6">What model your first smartphone was?</option>
-                    </select> 
-                	</div>			 
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="email" name="email" placeholder="Email" required>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
 
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="phone" name="ph_num" placeholder="Phone Number" required>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="ntest" placeholder="Number of tests" required>
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
 					
 
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="answer_2" placeholder="Answer">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					<br>
 					<br>
 
-					<!--<div class="container-login100-form-btn m-t-20">
+					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn">
-							Sign in
+							Submit
 						</button>
-					</div>-->
+					</div>
 
 
 					<!-- FORGET USER NAME 
@@ -139,105 +151,8 @@
 							Sign up
 						</a>
 					</div>-->
-				
-
-
-                    <span class="login100-form-title p-b-33">
-						Personal Information
-					</span>	
-
-					<br>
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Registration number is required">
-						<div align="center">
-						<input class="input100" type="text" name="reg_no" placeholder="Laboratory Registration No">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					</div>		
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Name is required">
-						<div align="center">
-						<input class="input100" type="password" name="registered_name" placeholder="Registered Name">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					</div>		
-
-					<div class="wrap-input100 validate-input">
-						<div align="center">
-						<input class="input100" type="text" name="address" placeholder="Address">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					</div>
-
-					<div class="wrap-input100 validate-input">
-						<div align="center">
-						<input class="input100" type="url" name="website" placeholder="Website">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					</div>
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Email-Id is required">
-						<div align="center">
-						<input class="input100" type="email" name="email_id" placeholder="Email Id">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					</div>		
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Contact is required">
-						<div align="center">
-						<input class="input100" type="tel" name="contact_no" placeholder="Contact Number">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-					</div>	
-
-
-					<br>
-					<br>
-					<br>	
-
-
-
-
-
-
-
-					<div class="container-login100-form-btn m-t-20">
-						<div align="center">
-						<button class="login100-form-btn">
-							Submit
-						</button>
-					</div>
-					</div>
-
-
-
-					</form>
-
-
-					<!-- FORGET USER NAME 
-
-					<div class="text-center p-t-45 p-b-4">
-						<span class="txt1">
-							Forgot
-						</span>
-
-						<a href="#" class="txt2 hov1">
-							Username / Password?
-						</a>
-					</div>
-
-					-->
-
-
-					
-
-				<!-- FORM ENDS HERE -->
+				</form>
+				<!-- FORM2 ENDS HERE -->
 
 
 
@@ -248,21 +163,21 @@
 
 	
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js')}}" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='vendor/animsition/js/animsition.min.js')}}" src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='vendor/bootstrap/js/popper.js')}}" src="vendor/bootstrap/js/popper.js"></script>
-	<script href="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js')}}" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='vendor/select2/select2.min.js')}}" src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='vendor/daterangepicker/moment.min.js')}}" src="vendor/daterangepicker/moment.min.js"></script>
-	<script href="{{ url_for('static',filename='vendor/daterangepicker/daterangepicker.js')}}" src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='vendor/countdowntime/countdowntime.js')}}" src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script href="{{ url_for('static',filename='js/main.js')}}" src="js/main.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>

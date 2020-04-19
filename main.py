@@ -4,7 +4,7 @@ from signup import *
 
 @app.route('/')
 def home():
-    return render_template('patient_register.html')
+    return render_template('sample_login.html')
 
 
 if __name__=="__main__":

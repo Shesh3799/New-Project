@@ -3,22 +3,19 @@ from utilities import *
 def plogin():
     if (session.get('pid') is None):
         if (request.method == 'POST'):
-            pid=request.form.get('patient_id')
-            name=request.form.get('patient_name')
+            name=request.form.get('patient_email')
             name=name.lower()
             password=request.form.get('patient_pass')
-            query = login.query.filter_by(uid=pid).first()
+            query = patient.query.filter_by(email=name).first()
             if (query is None):
                 flash('No such Patient ID exist')
                 return redirect(url_for('plogin'))
             else:
-                qname=query.username
-                qname=qname.lower()
-                if(query.password==password and qname==name):
-                    session['pid'] = pid
+                if(query.password==password):
+                    session['pid'] = name
                     flash("Sucess")
                 else:
-                    flash("User name or password error")
+                    flash("Password error")
             return render_template('patient_login.html')
         return render_template('patient_login.html')
 
@@ -30,22 +27,19 @@ def plogin():
 def llogin():
     if (session.get('lid') is None):
         if (request.method == 'POST'):
-            lid=request.form.get('lab_id')
             name=request.form.get('lab_name')
             name=name.lower()
             password=request.form.get('lab_pass')
-            query = lab_login.query.filter_by(lid=lid).first()
+            query = sample_collection.query.filter_by(regno=name).first()
             if (query is None):
                 flash('No such Lab ID exist')
                 return redirect(url_for('llogin'))
             else:
-                qname=query.username
-                qname=qname.lower()
-                if(query.password==password and qname==name):
-                    session['lid'] = lid
+                if(query.password==password):
+                    session['lid'] = name
                     flash("Sucess")
                 else:
-                    flash("User name or password error")
+                    flash("Password error")
             return render_template('sample_login.html')
         return render_template('sample_login.html')
 
@@ -57,22 +51,19 @@ def llogin():
 def tlogin():
     if (session.get('tid') is None):
         if (request.method == 'POST'):
-            tid=request.form.get('test_id')
             name=request.form.get('test_name')
             name=name.lower()
             password=request.form.get('test_pass')
-            query = testlab_login.query.filter_by(tid=tid).first()
+            query = testing_facility.query.filter_by(regno=name).first()
             if (query is None):
                 flash('No such Lab ID exist')
                 return redirect(url_for('tlogin'))
             else:
-                qname=query.username
-                qname=qname.lower()
-                if(query.password==password and qname==name):
-                    session['tid'] = tid
+                if(query.password==password):
+                    session['tid'] = name
                     flash("Sucess")
                 else:
-                    flash("User name or password error")
+                    flash("Password error")
             return render_template('testing_login.html')
         return render_template('testing_login.html')
 
