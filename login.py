@@ -13,15 +13,14 @@ def plogin():
             else:
                 if(query.password==password):
                     session['pid'] = name
-                    flash("Sucess")
+                    return redirect(url_for('patient_dashboard'))
                 else:
                     flash("Password error")
             return render_template('patient_login.html')
         return render_template('patient_login.html')
 
     else:
-        flash("Already Signed IN as "+str(session.get('pid')))
-        return render_template('patient_login.html')
+        return redirect(url_for('patient_dashboard'))
 
 @app.route('/llogin',methods=['GET','POST'])
 def llogin():
@@ -37,15 +36,14 @@ def llogin():
             else:
                 if(query.password==password):
                     session['lid'] = name
-                    flash("Sucess")
+                    return redirect(url_for('staff_dashboard'))
                 else:
                     flash("Password error")
             return render_template('sample_login.html')
         return render_template('sample_login.html')
 
     else:
-        flash("Already Signed IN as "+str(session.get('lid')))
-        return render_template('sample_login.html')
+        return redirect(url_for('staff_dashboard'))
 
 @app.route('/tlogin',methods=['GET','POST'])
 def tlogin():

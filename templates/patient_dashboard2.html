@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Patient Dashboard</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="{{ url_for('static',filename='lab/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static',filename='lab/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="{{ url_for('static',filename='lab/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+ 
+    <div class="alert alert-warning">
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
+    <!-- <span aria-hidden="true">&times;</span>
+  </button> -->
+</div>
+  {% endif %}
+{% endwith %}
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          
+        </div>
+        <div class="sidebar-brand-text mx-3">Menu</div>
+      </a>
+
+ 
+      <!-- Nav Item - Tables -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/pdash">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Home</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+            <li class="nav-item active">
+        <a class="nav-link" href="/pdash2">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Test</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <hr class="sidebar-divider d-none d-md-block">
+            <li class="nav-item active">
+        <a class="nav-link" href="/pdash3">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Book Appointment</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+
+      
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <h1 class="text-center">Welcome {{query.adharname}}</h1>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+           
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">           
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class=" dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">     
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span><h4 style="color: #00007f">{{query.adharname}}</h4></span>
+                <!-- <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60"> -->
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/plogout">
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid text-justify" style="font-size: 20px;">
+          <form action="/pdash2" method="post">
+              <div class="row">
+                <div class="col-6">
+                  <h3>1.Symptoms :</h3>  
+                </div>
+                <div class="col-6">
+                  <input type="checkbox" class="m-3" name="Cough" value="0.35">Cough
+                  <input type="checkbox" class="m-3" name="Fever" value="0.65">Fever
+                  <input type="checkbox" class="m-3" name="Difficulty" value="1">Difficulty In Breathing
+                  <input type="checkbox" class="m-3" name="sno" value="0">None
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <h3>2.Have you been travelled internationally recently :</h3>  
+                </div>
+                <div class="col-6">
+                  <input type="checkbox" class="m-3" name="yes" value="1">Yes
+                  <input type="checkbox" class="m-3" name="no" value="0">No
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <h3>3.Have been travelled to any of following state :</h3>
+                </div>
+                <div class="col-6">
+                  <input type="checkbox" class="m-3" name="mh" value="0.507">Maharashtra
+                  <input type="checkbox" class="m-3" name="gj" value="0.208">Gujrat
+                  <input type="checkbox" class="m-3" name="dl" value="0.164">Delhi
+                  <input type="checkbox" class="m-3" name="mp" value="0.119">Madhya Pradesh
+                  <input type="checkbox" class="m-3" name="cno" value="0">None
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <h3>4.Are you suffering from any of these disorders :</h3>
+                </div>
+                <div class="col-6">
+                  <input type="checkbox" class="m-3" name="as" value="1">Asthma
+                  <input type="checkbox" class="m-3" name="di" value="1">Diabetes
+                  <input type="checkbox" class="m-3" name="ai" value="1">AIDS
+                  <input type="checkbox" class="m-3" name="hd" value="1">Heart Disease
+                  <input type="checkbox" class="m-3" name="hd" value="1">Hyper Tension
+                  <input type="checkbox" class="m-3" name="dno" value="0">None
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6">
+                  <h3>5.Have you been in contact of any coronoa affected person :</h3>
+                </div>
+                <div class="col-6">
+                  <input type="checkbox" class="m-3" name="as" value="1">Yes
+                  <input type="checkbox" class="m-3" name="cono" value="0">No
+                </div>
+              </div>
+              <br>
+              <button type="submit" class="btn text-center btn-primary">Submit</button>
+        </form>
+
+          
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <!-- <span>Copyright &copy; Your Website 2019</span> -->
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{{ url_for('static',filename='lab/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='lab/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{{ url_for('static',filename='lab/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{{ url_for('static',filename='lab/vendor/jquery-easing/jquery.easing.min.js')}}js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="{{ url_for('static',filename='lab/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='lab/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="{{ url_for('static',filename='lab/js/demo/datatables-demo.js')}}"></script>
+
+</body>
+
+</html>

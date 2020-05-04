@@ -1,10 +1,11 @@
 from login import *
 from signup import *
+from dashboard import *
 
 
 @app.route('/')
 def home():
-    return render_template('sample_login.html')
+    return render_template('index.html')
 
 
 if __name__=="__main__":
